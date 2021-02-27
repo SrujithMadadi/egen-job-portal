@@ -1,0 +1,23 @@
+.jobDetailsHeaderContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 8rem;
+}
+
+.jobDetailsHeaderLogoContainer{
+    width: 20%;
+    height: 100%;
+}
+
+.jobDetailsHeaderLogoContainer img{
+    height: 100%;
+}
+
+.jobDetailsHeaderCompanyDetailsContainer{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+

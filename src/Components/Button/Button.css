@@ -1,0 +1,16 @@
+.customButton{
+    background-color: #5865E0;
+    color: white;
+    text-transform: none;
+    width: 30%;
+    height: 2.5rem;
+}
+
+.applyButton .companySiteButton{
+    width: 9rem;
+}
+
+.companySiteButton{
+    color: #5865E0;
+    background-color: white;
+}

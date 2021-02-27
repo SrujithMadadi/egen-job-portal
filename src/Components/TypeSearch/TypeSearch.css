@@ -1,0 +1,21 @@
+.typeSearch{
+    width: 35%;
+    margin-right: 2px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.jobTypeContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fullTimeText{
+    font-weight: bold;
+}
+
+.jobTypeCheckBox{
+    margin-right: 1rem;
+}

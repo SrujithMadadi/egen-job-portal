@@ -1,0 +1,66 @@
+.cardContainer{
+    margin-top: 4rem;
+    height: 12rem;
+    width: 21rem;
+    background-color: #FFFFFF;
+    border-radius: 4%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    overflow: inherit;
+}
+
+.logoContainer{
+    position: absolute;
+    top:-9%;
+    left: 10%;
+}
+.logoContainer img{
+    height: 2rem;
+    width: 2rem;
+    border-radius: 29%;
+}
+
+.cardContainer .MuiButtonBase-root{
+    height: 100%;
+    padding: 2rem;
+    padding-bottom: 1.5rem;
+}
+
+.cardContentContainer{
+    padding: 0;
+    height: 100%;
+}
+.cardContent{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.jobInformationContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 70%;
+}
+
+.typeContainer{
+    display: flex;
+    color:rgb(160, 158, 158);
+}
+
+.jobTitle{
+    color: black;
+    font-weight: bold;
+}
+
+.jobCompany{
+    color:rgb(160, 158, 158);
+}
+
+.jobLocation{
+    color: rgb(86, 96, 189);
+    font-weight: bold;
+}

@@ -1,0 +1,13 @@
+.searchBarContainer{
+    margin: 0 16rem;
+    display: flex;
+    margin-top: 5rem;
+    background-color: #F5F6F8;
+}
+
+.locationSearch{
+    width: 25%;
+    margin-right: 2px;
+}
+
+

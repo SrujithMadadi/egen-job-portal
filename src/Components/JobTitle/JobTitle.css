@@ -1,0 +1,14 @@
+.JobTitleContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10%;
+    margin-bottom: 2rem;
+}
+
+.jobTitleInfoContainer{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-around;
+}
