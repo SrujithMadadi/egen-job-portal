@@ -18,7 +18,6 @@ const JobDetails=(props)=>{
     
 	return (
 		<React.Fragment>
-			
 			{
 				props.jobDetails.length>0?
 					<React.Fragment>
@@ -37,7 +36,7 @@ const JobDetails=(props)=>{
 						<div className={props.darkTheme?"applyContainer darkCardTheme":"applyContainer"}>
 							<div className="applyContainerJobInfo">
 								<div className="jobTitle">{props.jobDetails[0].title}</div>
-								<div className="jobLocation">{props.jobDetails[0].location}</div>
+								<div className="lightText">{props.jobDetails[0].company_url}</div>
 							</div>
 							<Button buttontext="Apply Now" classes="applyButton"/>
 						</div>

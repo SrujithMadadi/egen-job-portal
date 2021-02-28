@@ -1,3 +1,7 @@
 .jobDetailsDescriptionDarkTheme h3{
     color: #FFFFFF;
 }
+
+.jobDetailsDescription p,.jobDetailsDescription li{
+    color: rgb(87, 82, 82);
+}

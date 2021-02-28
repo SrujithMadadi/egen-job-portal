@@ -37,3 +37,7 @@
     justify-content: space-between;
     align-items: center;
 }
+
+.jobTitle p{
+    margin:3px 0;
+}
