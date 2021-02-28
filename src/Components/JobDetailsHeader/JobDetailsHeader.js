@@ -1,10 +1,10 @@
 import React from "react";
-import Button from "Components/Button/Button"
+import Button from "Components/Button/Button";
 import "./JobDetailsHeader.css";
 
 const JobDetailsHeader=(props)=>{
 	return (
-		<div className="jobDetailsHeaderContainer">
+		<React.Fragment>
 			<div className="jobDetailsHeaderLogoContainer">
 				<img src={props.jobDetails.company_logo} alt="companyLogo"></img>
 			</div>
@@ -12,7 +12,8 @@ const JobDetailsHeader=(props)=>{
 				<div>{props.jobDetails.company}</div>
 				<Button buttontext="Company Site" classes="companySiteButton"/>
 			</div>
-		</div>
+		</React.Fragment>	
+
 	)
 }
 

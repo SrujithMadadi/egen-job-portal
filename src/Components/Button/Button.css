@@ -6,10 +6,6 @@
     height: 2.5rem;
 }
 
-.applyButton .companySiteButton{
-    width: 9rem;
-}
-
 .companySiteButton{
     color: #5865E0;
     background-color: #FFFFFF;
@@ -22,6 +18,7 @@
     align-self: center;
 }
 
-.companySiteButton .applyButton{
-    width: 5rem;
+.companySiteButton,.applyButton{
+    width: 10rem;
+    height: 3rem;
 }

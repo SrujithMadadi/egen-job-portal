@@ -3,13 +3,20 @@ import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import Typography from '@material-ui/core/Typography';
-import {withRouter} from "react-router-dom"
+import {withRouter} from "react-router-dom";
+import {connect} from "react-redux";
+import * as Actions from "Store/Actions/Actions"
 import "./Card.css"
 
 const JobCard=(props)=>{
+	
+	const redirectToJobDetails=()=>{
+		props.resetJobDetails()
+		props.history.push("/jobDetails?jobId="+props.jobData.id)
+	}
 
 	return (
-		<Card className={props.darkTheme?"cardContainer darkCardTheme":"cardContainer"} onClick={()=>props.history.push("/jobDetails?jobId="+props.jobData.id)}>
+		<Card className={props.darkTheme?"cardContainer darkCardTheme":"cardContainer"} onClick={redirectToJobDetails}>
 			<div className="logoContainer">
 				{props.jobData.logo?<img src={props.jobData.logo} alt="imageLogo" className="cardLogo"/>:null}
 			</div>
@@ -32,4 +39,10 @@ const JobCard=(props)=>{
 	)
 }
 
-export default withRouter(JobCard)
+const mapDispatchToProps=(dispatch)=>{
+	return {
+		resetJobDetails:()=>dispatch({type:Actions.RESETJOBDETAILS})
+	}
+}
+
+export default withRouter(connect(null,mapDispatchToProps)(JobCard))
