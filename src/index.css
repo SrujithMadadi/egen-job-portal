@@ -3,8 +3,14 @@ html,body,#root{
   width: 100%;
 }
 
+#root{
+  display: flex;
+  flex-direction: column;
+}
+
 body{
   margin: 0;
+  font-family: 'Arial';
 }
 
 .searchField{

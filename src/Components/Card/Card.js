@@ -11,7 +11,7 @@ const JobCard=(props)=>{
 	return (
 		<Card className={props.darkTheme?"cardContainer darkCardTheme":"cardContainer"} onClick={()=>props.history.push("/jobDetails?jobId="+props.jobData.id)}>
 			<div className="logoContainer">
-				<img src={props.jobData.logo} alt="imageLogo" />
+				{props.jobData.logo?<img src={props.jobData.logo} alt="imageLogo" className="cardLogo"/>:null}
 			</div>
 			<CardActionArea>
 				<CardContent className="cardContentContainer">

@@ -13,13 +13,18 @@
 
 .logoContainer{
     position: absolute;
-    top:-9%;
+    top:-7%;
     left: 10%;
-}
-.logoContainer img{
     height: 2rem;
     width: 2rem;
     border-radius: 29%;
+    overflow: hidden;
+}
+
+.logoContainer img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
 }
 
 .cardContainer .MuiButtonBase-root{
