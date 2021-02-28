@@ -6,7 +6,6 @@ import JobTitle from "Components/JobTitle/JobTitle";
 import Card from '@material-ui/core/Card';
 import Apply from "Components/Apply/Apply"
 import JobDetailsHeader from "Components/JobDetailsHeader/JobDetailsHeader";
-import Header from "Components/Header/Header"
 import "./JobDetails.css";
 
 const JobDetails=(props)=>{
@@ -21,7 +20,6 @@ const JobDetails=(props)=>{
 			{
 				props.jobDetails.length>0?
 					<React.Fragment>
-						<Header />
 						<Card className="jobDetailsContainer jobDetailsHeader">	
 							<JobDetailsHeader jobDetails={props.jobDetails[0]}/>
 						</Card>

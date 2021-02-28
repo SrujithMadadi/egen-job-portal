@@ -2,25 +2,25 @@ import React, { useEffect } from "react";
 import {connect} from "react-redux";
 import {getJobs} from "Store/ActionCreators/JobActions";
 import Cards from "Components/Cards/Cards";
-import Header from "Components/Header/Header";
 import SearchBar from "Components/SearchBar/SearchBar"
+import * as Actions from "Store/Actions/Actions"
 import "./jobs.css"
 
 const Jobs=(props)=>{
 
 	useEffect(()=>{
-		let latitude=""
-		let longitude=""
+		let lat=""
+		let long=""
 		navigator.geolocation.getCurrentPosition(function(position) {
-			latitude=position.coords.latitude;
-			longitude=position.coords.longitude
+			lat=position.coords.latitude;
+			long=position.coords.longitude
 		});	  
-		props.getJobs(latitude,longitude)
+		props.resetSearch()
+		props.getJobs({lat,long})
 	},[])
 
 	return (
 		<React.Fragment>
-			<Header />
 			<SearchBar />
 			<div className="jobsContainer">
 				{props.jobs.length>0?
@@ -38,7 +38,8 @@ const mapStateToProps=(state)=>{
 
 const mapDispatchToProps=(dispatch)=>{
 	return {
-		getJobs:(latitude,longitude)=>dispatch(getJobs(latitude,longitude))
+		getJobs:(searchObject)=>dispatch(getJobs(searchObject)),
+		resetSearch:()=>dispatch({type:Actions.RESETSEARCH})
 	}
 }
 

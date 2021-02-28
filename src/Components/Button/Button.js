@@ -4,7 +4,7 @@ import "./Button.css"
 
 const CustomButton=(props)=>{
 	return (
-		<Button variant="contained" className={props.classes+" customButton"}>
+		<Button variant="contained" className={props.classes+" customButton"} onClick={props.search}>
 			{props.buttontext}
 		</Button>
 	)
