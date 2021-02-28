@@ -1,17 +1,18 @@
 /* eslint-disable camelcase */
 import * as Actions from "Store/Actions/Actions";
 
-const ruleMetricsState={
+const initialState={
 	jobs:[],
 	description:"",
 	location:"",
-	full_time:false
+	full_time:false,
+	page:1
 }
 
-const homeReducer=(state=ruleMetricsState,action)=>{
+const homeReducer=(state=initialState,action)=>{
 	switch(action.type){
 	case Actions.GETJOBS:
-		return {...state,jobs:[...action.jobs]}
+		return {...state,jobs:state.page===1?action.jobs:[...state.jobs,...action.jobs]}
 	case Actions.SETJOBTYPE:
 		return {...state,full_time:action.jobType}
 	case Actions.SETJOBTITLE:
@@ -19,9 +20,13 @@ const homeReducer=(state=ruleMetricsState,action)=>{
 	case Actions.SETJOBLOCATION:
 		return {...state,location:action.location}
 	case Actions.RESETSEARCH:
-		return {...state,}
+		return {...state,description:"",location:"",full_time:false,page:1}
+	case Actions.INCREMENTCOUNT:
+		return {...state,page:state.page+1}
+	case Actions.RESETPAGE:
+		return {...state,page:1}
 	default :
-		return {...state,description:"",location:"",full_time:false}
+		return {...state}
 	}
 }
 

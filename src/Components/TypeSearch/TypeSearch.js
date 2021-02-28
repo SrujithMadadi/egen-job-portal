@@ -9,6 +9,10 @@ import "./TypeSearch.css"
 
 const TypeSearch=(props)=>{
 
+	const getSearchResults=()=>{
+		props.resetPage()
+		props.getJobs({location:props.location,description:props.title,full_time:props.type,page:1})
+	}
 	return (
 		<div className="typeSearch searchField">
 			<div className="jobTypeContainer">
@@ -22,7 +26,7 @@ const TypeSearch=(props)=>{
 				/>
 				<div className="fullTimeText">Full Time Only</div>
 			</div>
-			<Button buttontext="Search" search={()=>props.getJobs({location:props.location,description:props.title,full_time:props.type})}/>
+			<Button buttontext="Search" search={getSearchResults}/>
 		</div>
 	)
 }
@@ -31,14 +35,16 @@ const mapStateToProps=(state)=>{
 	return {
 		location:state.jobsReducer.location,
 		title:state.jobsReducer.description,
-		type:state.jobsReducer.full_time
+		type:state.jobsReducer.full_time,
+		page:state.jobsReducer.page
 	}
 }
 
 const mapDispatchToProps=(dispatch)=>{
 	return {
 		setType:(value)=>dispatch({type:Actions.SETJOBTYPE,jobType:value}),
-		getJobs:(searchObject)=>dispatch(getJobs(searchObject))
+		getJobs:(searchObject)=>dispatch(getJobs(searchObject)),
+		resetPage:()=>dispatch({type:Actions.RESETPAGE})
 	}
 }
 

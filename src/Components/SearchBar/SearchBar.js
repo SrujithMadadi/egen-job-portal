@@ -5,7 +5,6 @@ import LocationSearch from "Components/LocationSearch/LocationSearch";
 import "./SearchBar.css";
 
 const SearchBar=()=>{
-	
 	return (
 		<div className="searchBarContainer">
 			<TitleSearch />

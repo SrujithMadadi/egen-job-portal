@@ -16,28 +16,37 @@ const Jobs=(props)=>{
 			long=position.coords.longitude
 		});	  
 		props.resetSearch()
-		props.getJobs({lat,long})
+		props.getJobs({lat,long,page:props.page})
 	},[])
 
+	const nextJobs=()=>{
+		props.incrementPage()
+		props.getJobs({location:props.location,description:props.title,full_time:props.type,page:props.page+1})
+	}
 	return (
 		<div className="jobsContainer">
 			<SearchBar />
 			{props.jobs.length>0?
-				<Cards jobs={props.jobs}/>:null}
+				<Cards jobs={props.jobs} getJobs={nextJobs}/>:null}
 		</div>
 	)
 }
 
 const mapStateToProps=(state)=>{
 	return {
-		jobs:state.jobsReducer.jobs
+		jobs:state.jobsReducer.jobs,
+		page:state.jobsReducer.page,
+		location:state.jobsReducer.location,
+		title:state.jobsReducer.description,
+		type:state.jobsReducer.full_time,
 	}
 }
 
 const mapDispatchToProps=(dispatch)=>{
 	return {
 		getJobs:(searchObject)=>dispatch(getJobs(searchObject)),
-		resetSearch:()=>dispatch({type:Actions.RESETSEARCH})
+		resetSearch:()=>dispatch({type:Actions.RESETSEARCH}),
+		incrementPage:()=>dispatch({type:Actions.INCREMENTCOUNT})
 	}
 }
 
