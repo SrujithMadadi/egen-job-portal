@@ -6,7 +6,8 @@ const initialState={
 	description:"",
 	location:"",
 	full_time:false,
-	page:1
+	page:1,
+	darkTheme:false
 }
 
 const homeReducer=(state=initialState,action)=>{
@@ -25,6 +26,8 @@ const homeReducer=(state=initialState,action)=>{
 		return {...state,page:state.page+1}
 	case Actions.RESETPAGE:
 		return {...state,page:1}
+	case Actions.SETDARKTHEME:
+		return {...state,darkTheme:!state.darkTheme}
 	default :
 		return {...state}
 	}
