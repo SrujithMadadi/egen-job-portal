@@ -1,3 +1,5 @@
 .jobsContainer{
-    margin: 0 16rem;
+    margin: 0 13rem;
+    display: flex;
+    flex-direction: column;
 }

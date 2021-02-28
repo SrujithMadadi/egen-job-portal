@@ -14,3 +14,10 @@
     color: #5865E0;
     background-color: white;
 }
+
+.loadMoreButton{
+    width: 3rem;
+    width: 8rem;
+    margin-bottom: 2rem;
+    align-self: center;
+}

@@ -20,13 +20,11 @@ const Jobs=(props)=>{
 	},[])
 
 	return (
-		<React.Fragment>
+		<div className="jobsContainer">
 			<SearchBar />
-			<div className="jobsContainer">
-				{props.jobs.length>0?
-					<Cards jobs={props.jobs}/>:null}
-			</div>
-		</React.Fragment>
+			{props.jobs.length>0?
+				<Cards jobs={props.jobs}/>:null}
+		</div>
 	)
 }
 
