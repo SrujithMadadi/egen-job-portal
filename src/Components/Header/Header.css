@@ -32,7 +32,8 @@
 
 .brightnessContainer{
     display:flex;
-    justify-content: center;
     align-items: center;
     margin-bottom: 2rem;
+    width: 6rem;
+    justify-content: space-between;
 }

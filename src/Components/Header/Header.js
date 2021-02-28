@@ -1,8 +1,9 @@
 import React from "react";
-import Switch from '@material-ui/core/Switch';
+// import Switch from '@material-ui/core/Switch';
 import WbSunnySharpIcon from '@material-ui/icons/WbSunnySharp';
 import Brightness3SharpIcon from '@material-ui/icons/Brightness3Sharp';
 import {connect} from "react-redux";
+import CustomSwitch from "Components/Switch/Switch"
 import * as Actions from "Store/Actions/Actions"
 import "./Header.css";
 
@@ -14,7 +15,7 @@ const Header=(props)=>{
 				<div className="headerTitle">devjobs</div>
 				<div className="brightnessContainer">
 					<WbSunnySharpIcon style={{fill: "#FFFFFF"}}/>
-					<Switch color="primary" style={{fill: "#FFFFFF"}} checked={props.darkTheme} onChange={()=>props.setDarkTheme()} value={props.darkTheme}/>
+					<CustomSwitch checked={props.darkTheme} change={()=>props.setDarkTheme()} value={props.darkTheme}/>
 					<Brightness3SharpIcon style={{fill: "#FFFFFF"}}/>
 				</div>
 			</div>
