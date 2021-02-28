@@ -48,7 +48,7 @@
 
 .typeContainer{
     display: flex;
-    color:rgb(160, 158, 158);
+    color:rgb(87, 82, 82);
 }
 
 .jobTitle{
@@ -56,8 +56,12 @@
     font-weight: bold;
 }
 
+.darkThemeJobTitle{
+    color: #FFFFFF;
+}
+
 .jobCompany{
-    color:rgb(160, 158, 158);
+    color:rgb(87, 82, 82);
 }
 
 .jobLocation{

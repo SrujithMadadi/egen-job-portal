@@ -9,7 +9,7 @@ import "./Card.css"
 const JobCard=(props)=>{
 
 	return (
-		<Card className="cardContainer" onClick={()=>props.history.push("/jobDetails?jobId="+props.jobData.id)}>
+		<Card className={props.darkTheme?"cardContainer darkCardTheme":"cardContainer"} onClick={()=>props.history.push("/jobDetails?jobId="+props.jobData.id)}>
 			<div className="logoContainer">
 				<img src={props.jobData.logo} alt="imageLogo" />
 			</div>
@@ -21,7 +21,7 @@ const JobCard=(props)=>{
 								<div>{props.jobData.time}</div>
 								<div>{props.jobData.type}</div>
 							</div>
-							<div className="jobTitle">{props.jobData.title}</div>
+							<div className={props.darkTheme?"jobTitle darkThemeJobTitle":"jobTitle"}>{props.jobData.title}</div>
 							<div className="jobCompany">{props.jobData.company}</div>
 						</div>
 						<div className="jobLocation">{props.jobData.location}</div>

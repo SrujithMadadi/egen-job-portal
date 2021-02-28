@@ -14,7 +14,7 @@ const TypeSearch=(props)=>{
 		props.getJobs({location:props.location,description:props.title,full_time:props.type,page:1})
 	}
 	return (
-		<div className="typeSearch searchField">
+		<div className={props.darkTheme?"typeSearch searchField darkCardTheme":"typeSearch searchField"}>
 			<div className="jobTypeContainer">
 				<Checkbox
 					className="jobTypeCheckBox"
@@ -24,7 +24,7 @@ const TypeSearch=(props)=>{
 					onChange={()=>props.setType(!props.type)}
 					inputProps={{ 'aria-label': 'uncontrolled-checkbox' }}
 				/>
-				<div className="fullTimeText">Full Time Only</div>
+				<div className={props.darkTheme?"fullTimeText fullTimeTextDarkTheme":"fullTimeText"}>Full Time Only</div>
 			</div>
 			<Button buttontext="Search" search={getSearchResults}/>
 		</div>

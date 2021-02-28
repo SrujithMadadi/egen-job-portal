@@ -7,7 +7,7 @@ const Cards=(props)=>{
 	return (
 		<React.Fragment>
 			<div className="cardsContainer">
-				{props.jobs.map(jobData=><Card jobData={jobData} key={jobData.id}/>)}
+				{props.jobs.map(jobData=><Card jobData={jobData} key={jobData.id} darkTheme={props.darkTheme}/>)}
 				<div className="dummyCardContainer"></div>
 			</div>
 			<Button buttontext="Load More" classes="loadMoreButton" search={props.getJobs}/>

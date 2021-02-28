@@ -1,5 +1,5 @@
 .jobsContainer{
-    margin: 0 13rem;
+    padding: 0 13rem;
     display: flex;
     flex-direction: column;
 }

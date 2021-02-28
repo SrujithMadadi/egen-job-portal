@@ -7,9 +7,9 @@ import "./LocationSearch.css";
 const LocationSearch=(props)=>{
 
 	return (
-		<div className="locationSearch searchField">
+		<div className={props.darkTheme?"locationSearch searchField darkCardTheme":"locationSearch searchField"}>
 			<LocationOnIcon color="primary"/>
-			<input placeholder="Filter by location..." className="searchInput" value={props.location} onChange={(event)=>props.setLocation(event.target.value)}/>
+			<input placeholder="Filter by location..." className={props.darkTheme?"searchInput darkCardTheme":"searchInput"} value={props.location} onChange={(event)=>props.setLocation(event.target.value)}/>
 		</div>
 	)
 }

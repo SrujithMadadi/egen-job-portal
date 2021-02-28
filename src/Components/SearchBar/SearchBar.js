@@ -4,12 +4,12 @@ import TitleSearch from "Components/TitleSearch/TitleSearch";
 import LocationSearch from "Components/LocationSearch/LocationSearch";
 import "./SearchBar.css";
 
-const SearchBar=()=>{
+const SearchBar=(props)=>{
 	return (
-		<div className="searchBarContainer">
-			<TitleSearch />
-			<LocationSearch />
-			<TypeSearch />
+		<div className={props.darkTheme?"searchBarContainer darkTheme":"searchBarContainer"}>
+			<TitleSearch {...props}/>
+			<LocationSearch {...props}/>
+			<TypeSearch {...props}/>
 		</div>
 	)
 }

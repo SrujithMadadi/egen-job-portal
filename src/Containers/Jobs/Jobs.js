@@ -24,10 +24,10 @@ const Jobs=(props)=>{
 		props.getJobs({location:props.location,description:props.title,full_time:props.type,page:props.page+1})
 	}
 	return (
-		<div className="jobsContainer">
-			<SearchBar />
+		<div className={props.darkTheme?"jobsContainer darkTheme":"jobsContainer lightTheme"}>
+			<SearchBar darkTheme={props.darkTheme}/>
 			{props.jobs.length>0?
-				<Cards jobs={props.jobs} getJobs={nextJobs}/>:null}
+				<Cards jobs={props.jobs} getJobs={nextJobs} darkTheme={props.darkTheme}/>:null}
 		</div>
 	)
 }
@@ -39,6 +39,7 @@ const mapStateToProps=(state)=>{
 		location:state.jobsReducer.location,
 		title:state.jobsReducer.description,
 		type:state.jobsReducer.full_time,
+		darkTheme:state.jobsReducer.darkTheme
 	}
 }
 

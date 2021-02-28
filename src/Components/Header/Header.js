@@ -8,7 +8,7 @@ import "./Header.css";
 
 const Header=(props)=>{
 	return (
-		<div className="headerContainer">
+		<div className={props.darkTheme?"headerContainer darkTheme":"headerContainer lightTheme"}>
 			<div className="circle"></div>
 			<div className="rectangle">
 				<div className="headerTitle">devjobs</div>

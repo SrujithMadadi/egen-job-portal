@@ -7,9 +7,9 @@ import "./TitleSearch.css"
 
 const TitleSearch=(props)=>{
 	return (
-		<div className="searchBar searchField">
+		<div className={props.darkTheme?"searchBar searchField darkCardTheme":"searchBar searchField"}>
 			<SearchIcon color="primary"/>
-			<input placeholder="Filter by title, companies,expertise..." className="searchInput" value={props.title} onChange={(event)=>props.setTitle(event.target.value)}/>
+			<input placeholder="Filter by title, companies,expertise..." className={props.darkTheme?"searchInput darkCardTheme":"searchInput"} value={props.title} onChange={(event)=>props.setTitle(event.target.value)}/>
 		</div>
 
 	)
