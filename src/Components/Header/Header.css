@@ -9,7 +9,7 @@
 
 .circle{
     height: 7rem;
-    width:14rem;
+    width:13rem;
     border-bottom-left-radius: 56%;
     background-color: #5865E0;
 }
@@ -21,7 +21,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-right: 14rem;
+    padding-right: 13rem;
 }
 
 .headerTitle{

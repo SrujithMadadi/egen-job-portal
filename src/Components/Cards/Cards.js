@@ -8,6 +8,7 @@ const Cards=(props)=>{
 		<React.Fragment>
 			<div className="cardsContainer">
 				{props.jobs.map(jobData=><Card jobData={jobData} key={jobData.id}/>)}
+				<div className="dummyCardContainer"></div>
 			</div>
 			<Button buttontext="Load More" classes="loadMoreButton" search={props.getJobs}/>
 		</React.Fragment>

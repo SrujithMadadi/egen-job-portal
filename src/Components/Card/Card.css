@@ -1,7 +1,7 @@
 .cardContainer{
     height: 13rem;
-    width: 21rem;
-    margin:0 1rem 3rem 1rem;
+    width: 32%;
+    margin-bottom: 3rem;
     background-color: #FFFFFF;
     border-radius: 4%;
     display: flex;
