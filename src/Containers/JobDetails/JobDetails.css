@@ -32,9 +32,8 @@
 }
 
 .applyContainer{
-    padding: 0 23rem;
+    padding: 1rem 23rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin:2rem 0;
 }
