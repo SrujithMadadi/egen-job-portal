@@ -21,3 +21,7 @@
     margin-bottom: 2rem;
     align-self: center;
 }
+
+.companySiteButton .applyButton{
+    width: 5rem;
+}

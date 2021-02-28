@@ -1,8 +1,8 @@
 .jobDetailsContainer{
     margin: 0 13rem;
-    height: auto;
     padding: 2rem;
     margin-bottom: 2rem;
+    z-index: 1;
 }
 
 .applyContainer{
@@ -18,4 +18,5 @@
 .jobDetailsHeader{
     padding: 0;
     margin-top: 5rem;
+    height: 35rem;
 }

@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 8rem;
+    height: 100%;
 }
 
 .jobDetailsHeaderLogoContainer{
@@ -12,6 +12,7 @@
 
 .jobDetailsHeaderLogoContainer img{
     height: 100%;
+    width: 100%;
 }
 
 .jobDetailsHeaderCompanyDetailsContainer{
@@ -19,5 +20,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-right: 2rem;
 }
 
