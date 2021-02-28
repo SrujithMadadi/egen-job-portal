@@ -22,19 +22,19 @@ const JobDetails=(props)=>{
 			{
 				props.jobDetails.length>0?
 					<React.Fragment>
-						<div className="jobDetails">
-							<Card className="jobDetailsContainer jobDetailsHeader">	
+						<div className={props.darkTheme?"jobDetails darkTheme":"jobDetails"}>
+							<Card className={props.darkTheme?"jobDetailsContainer jobDetailsHeader darkCardTheme":"jobDetailsContainer jobDetailsHeader"}>	
 								<JobDetailsHeader jobDetails={props.jobDetails[0]}/>
 							</Card>
-							<Card className="jobDetailsContainer">
-								<JobTitle jobDetails={props.jobDetails[0]}/>
-								<JobInfo description={props.jobDetails[0].description}/>
+							<Card className={props.darkTheme?"jobDetailsContainer darkCardTheme":"jobDetailsContainer"}>
+								<JobTitle jobDetails={props.jobDetails[0]} darkTheme={props.darkTheme}/>
+								<JobInfo description={props.jobDetails[0].description} darkTheme={props.darkTheme}/>
 							</Card>
 							<Card className="jobDetailsContainer howToapplyContainer" >
 								<Apply applyText={props.jobDetails[0].how_to_apply} />
 							</Card>
 						</div>
-						<div className="applyContainer">
+						<div className={props.darkTheme?"applyContainer darkCardTheme":"applyContainer"}>
 							<div className="applyContainerJobInfo">
 								<div className="jobTitle">{props.jobDetails[0].title}</div>
 								<div className="jobLocation">{props.jobDetails[0].location}</div>
@@ -50,7 +50,8 @@ const JobDetails=(props)=>{
 
 const mapStateToProps=(state)=>{
 	return {
-		jobDetails:state.jobDetailsReducer.job
+		jobDetails:state.jobDetailsReducer.job,
+		darkTheme:state.jobsReducer.darkTheme
 	}
 }
 
