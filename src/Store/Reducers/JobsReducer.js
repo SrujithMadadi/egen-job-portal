@@ -7,7 +7,8 @@ const initialState={
 	location:"",
 	full_time:false,
 	page:1,
-	darkTheme:false
+	darkTheme:false,
+	mobileStatus:false
 }
 
 const homeReducer=(state=initialState,action)=>{
@@ -28,6 +29,8 @@ const homeReducer=(state=initialState,action)=>{
 		return {...state,page:1}
 	case Actions.SETDARKTHEME:
 		return {...state,darkTheme:!state.darkTheme}
+	case Actions.SETDEVICESTATUS:
+		return {...state,mobileStatus:action.status}
 	default :
 		return {...state}
 	}

@@ -19,3 +19,9 @@
 .fullTimeTextDarkTheme{
     color: white;
 }
+
+@media (max-width: 768px){
+    .typeSearch{
+        display: none;
+    }
+}

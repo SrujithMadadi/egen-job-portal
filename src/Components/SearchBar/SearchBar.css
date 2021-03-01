@@ -10,10 +10,6 @@
     margin-right: 2px;
 }
 
-@media (max-width: 768px){
-    .searchBarContainer{
-        display: none;
-    }
-}
+
 
 

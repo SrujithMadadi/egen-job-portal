@@ -6,3 +6,30 @@
     align-items: center;
 }
 
+@media (max-width: 768px){
+
+    .fa-filter{
+        display: inline-block;
+        margin-right: 1rem;
+        color: grey;
+    }
+    
+    .searchBar{
+        width: 100%;
+        flex-direction: row-reverse;
+    }
+    .titleSearchIconContainer{
+        height: 2rem;
+        width: 2.3rem;
+        border-radius: 15%;
+        background-color: #5865E0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .titleSearchIconContainer>svg{
+        fill: white;
+    }
+}
+

@@ -8,7 +8,12 @@ import "./TitleSearch.css"
 const TitleSearch=(props)=>{
 	return (
 		<div className={props.darkTheme?"searchBar searchField darkCardTheme":"searchBar searchField"}>
-			<SearchIcon color="primary"/>
+			{props.deviceStatus?
+				<React.Fragment>
+					<div className="titleSearchIconContainer" onClick={props.getSearchResults}><SearchIcon color="primary"/></div>
+					<i className="fas fa-filter"></i>
+				</React.Fragment>:<SearchIcon color="primary"/>
+			}
 			<input placeholder="Filter by title, companies,expertise..." className={props.darkTheme?"searchInput darkCardTheme":"searchInput"} value={props.title} onChange={(event)=>props.setTitle(event.target.value)}/>
 		</div>
 
@@ -17,7 +22,8 @@ const TitleSearch=(props)=>{
 
 const mapStateToProps=(state)=>{
 	return {
-		title:state.jobsReducer.description
+		title:state.jobsReducer.description,
+		deviceStatus:state.jobsReducer.mobileStatus
 	}
 }
 
