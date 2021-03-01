@@ -7,6 +7,7 @@ import Card from '@material-ui/core/Card';
 import Apply from "Components/Apply/Apply"
 import JobDetailsHeader from "Components/JobDetailsHeader/JobDetailsHeader";
 import Button from "Components/Button/Button";
+import CircularProgress from '@material-ui/core/CircularProgress';
 import "./JobDetails.css";
 
 const JobDetails=(props)=>{
@@ -41,7 +42,7 @@ const JobDetails=(props)=>{
 							<Button buttontext="Apply Now" classes="applyButton"/>
 						</div>
 					</React.Fragment>
-					:null
+					:<CircularProgress className="circularProgress"/>
 			}
 		</React.Fragment>
 	)

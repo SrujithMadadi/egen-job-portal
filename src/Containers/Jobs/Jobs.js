@@ -3,7 +3,8 @@ import {connect} from "react-redux";
 import {getJobs} from "Store/ActionCreators/JobActions";
 import Cards from "Components/Cards/Cards";
 import SearchBar from "Components/SearchBar/SearchBar"
-import * as Actions from "Store/Actions/Actions"
+import * as Actions from "Store/Actions/Actions";
+import CircularProgress from '@material-ui/core/CircularProgress';
 import "./jobs.css"
 
 const Jobs=(props)=>{
@@ -27,7 +28,7 @@ const Jobs=(props)=>{
 		<div className={props.darkTheme?"jobsContainer darkTheme":"jobsContainer lightTheme"}>
 			<SearchBar darkTheme={props.darkTheme}/>
 			{props.jobs.length>0?
-				<Cards jobs={props.jobs} getJobs={nextJobs} darkTheme={props.darkTheme}/>:null}
+				<Cards jobs={props.jobs} getJobs={nextJobs} darkTheme={props.darkTheme}/>:<CircularProgress className="circularProgress"/>}
 		</div>
 	)
 }
