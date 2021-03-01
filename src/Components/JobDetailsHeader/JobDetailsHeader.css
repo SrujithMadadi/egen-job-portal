@@ -20,3 +20,31 @@
     margin: 3px 0;
 }
 
+@media (max-width: 768px){
+    .jobDetailsHeaderLogoContainer{
+       position: absolute;
+       height: 2rem;
+       width: 2rem;
+       top: -9%;
+       border-radius: 29%;
+       overflow: hidden;
+    }
+
+    .jobDetailsHeaderCompanyDetailsContainer{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .jobDetailsHeaderCompanyDetailsContainer>div{
+        margin-bottom: 1rem;
+    }
+
+    .jobDetailsHeaderCompanyDetailsContainer>div>p{
+        margin-top: 8px;
+        text-align: center;
+    }
+}
+

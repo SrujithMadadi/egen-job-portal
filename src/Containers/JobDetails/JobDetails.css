@@ -41,3 +41,24 @@
 .jobTitle p{
     margin:3px 0;
 }
+
+@media (max-width: 768px){
+    .jobDetails{
+        padding:0 1rem;
+    }
+    
+    .applyContainer{
+        padding:1rem 1rem;
+    }
+
+    .applyContainerJobInfo{
+        display: none;
+    }
+
+    .jobDetailsHeader{
+        height: 11rem;
+        position: relative;
+        z-index: 1;
+        overflow: visible;
+    }
+}

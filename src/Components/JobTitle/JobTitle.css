@@ -16,3 +16,25 @@
 .darkThemeTitle{
     color: #FFFFFF;
 }
+
+@media (max-width: 768px){
+    .JobTitleContainer{
+        flex-direction: column;
+        height: 7rem;
+        margin-bottom: 4rem;
+    }
+
+    .jobTitleInfoContainer{
+        width: 100%;
+        align-items: flex-start;
+        margin-bottom: 1rem;
+    }
+
+    .jobTitleInfoContainer>div{
+        margin-top: 0.5rem;
+    }
+
+    .jobLocation{
+        margin-bottom: 0.5rem;
+    }
+}
