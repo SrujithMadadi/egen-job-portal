@@ -46,3 +46,9 @@ body{
 .lightText{
   color: rgb(161, 159, 159)
 }
+
+.circularProgress{
+  position: relative;
+  top: 50%;
+  left: 50%;
+}

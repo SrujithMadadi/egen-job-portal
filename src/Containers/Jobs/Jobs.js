@@ -25,11 +25,14 @@ const Jobs=(props)=>{
 		props.getJobs({location:props.location,description:props.title,full_time:props.type,page:props.page+1})
 	}
 	return (
-		<div className={props.darkTheme?"jobsContainer darkTheme":"jobsContainer lightTheme"}>
-			<SearchBar darkTheme={props.darkTheme}/>
+		<React.Fragment>
 			{props.jobs.length>0?
-				<Cards jobs={props.jobs} getJobs={nextJobs} darkTheme={props.darkTheme}/>:<CircularProgress className="circularProgress"/>}
-		</div>
+				<div className={props.darkTheme?"jobsContainer darkTheme":"jobsContainer lightTheme"}>
+					<SearchBar darkTheme={props.darkTheme}/>
+					<Cards jobs={props.jobs} getJobs={nextJobs} darkTheme={props.darkTheme}/>
+				</div>
+				:<CircularProgress className="circularProgress"/>}
+		</React.Fragment>
 	)
 }
 

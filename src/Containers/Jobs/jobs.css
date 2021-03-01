@@ -5,10 +5,6 @@
     flex: 1;
 }
 
-.circularProgress{
-    align-self: center;
-}
-
 @media (max-width: 768px){
     .jobsContainer{
         padding: 0 1rem;
