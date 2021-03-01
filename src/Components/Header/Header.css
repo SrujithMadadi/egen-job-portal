@@ -42,3 +42,13 @@
     height: 16px;
     width: 16px;
 }
+
+@media (max-width: 768px){
+    .circle{
+        display: none;
+    }
+
+    .rectangle{
+        padding:0 1rem;
+    }
+}

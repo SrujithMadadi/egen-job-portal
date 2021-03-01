@@ -8,3 +8,18 @@
 .dummyCardContainer{
     width: 32%;
 }
+
+@media (max-width: 768px){
+    .cardsContainer{
+        margin-top: 10rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .dummyCardContainer{
+        display: none;
+    }
+
+}
