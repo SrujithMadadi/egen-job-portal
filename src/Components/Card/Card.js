@@ -24,12 +24,12 @@ const JobCard=(props)=>{
 				<CardContent className="cardContentContainer">
 					<Typography variant="body2" color="textSecondary" component="div" className="cardContent">
 						<div className="jobInformationContainer">
-							<div className="typeContainer">
+							<div className="typeContainer lightText">
 								<div>{props.jobData.time}</div>
 								<div>{props.jobData.type}</div>
 							</div>
 							<div className={props.darkTheme?"jobTitle darkThemeJobTitle":"jobTitle"}>{props.jobData.title}</div>
-							<div className="jobCompany">{props.jobData.company}</div>
+							<div className="lightText">{props.jobData.company}</div>
 						</div>
 						<div className="jobLocation">{props.jobData.location}</div>
 					</Typography>

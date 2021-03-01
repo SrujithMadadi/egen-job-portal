@@ -7,7 +7,7 @@ const JobTitle=(props)=>{
 	return (
 		<div className="JobTitleContainer">
 			<div className="jobTitleInfoContainer">
-				<div className="typeContainer">
+				<div className="typeContainer lightText">
 					<div>{props.jobDetails.time}</div>
 					<div>{props.jobDetails.type}</div>
 				</div>

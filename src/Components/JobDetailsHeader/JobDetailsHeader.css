@@ -20,6 +20,10 @@
     margin: 3px 0;
 }
 
+.jobDetailsHeaderCompanyText{
+    color: #FFFFFF;
+}
+
 @media (max-width: 768px){
     .jobDetailsHeaderLogoContainer{
        position: absolute;

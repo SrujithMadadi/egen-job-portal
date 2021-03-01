@@ -15,7 +15,7 @@ const SearchBar=(props)=>{
 	}
 
 	return (
-		<div className={props.darkTheme?"searchBarContainer darkTheme":"searchBarContainer"}>
+		<div data-testid="searchBarContainerTestId" className={props.darkTheme?"searchBarContainer darkTheme":"searchBarContainer"}>
 			<TitleSearch {...props} getSearchResults={getSearchResults}/>
 			<LocationSearch {...props} />
 			<TypeSearch {...props} getSearchResults={getSearchResults}/>

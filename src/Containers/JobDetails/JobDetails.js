@@ -23,7 +23,7 @@ const JobDetails=(props)=>{
 					<React.Fragment>
 						<div className={props.darkTheme?"jobDetails darkTheme":"jobDetails"}>
 							<Card className={props.darkTheme?"jobDetailsContainer jobDetailsHeader darkCardTheme":"jobDetailsContainer jobDetailsHeader"}>	
-								<JobDetailsHeader jobDetails={props.jobDetails[0]}/>
+								<JobDetailsHeader jobDetails={props.jobDetails[0]} darkTheme={props.darkTheme}/>
 							</Card>
 							<Card className={props.darkTheme?"jobDetailsContainer darkCardTheme":"jobDetailsContainer"}>
 								<JobTitle jobDetails={props.jobDetails[0]} darkTheme={props.darkTheme}/>

@@ -9,9 +9,10 @@ import "./TypeSearch.css"
 const TypeSearch=(props)=>{
 
 	return (
-		<div className={props.darkTheme?"typeSearch searchField darkCardTheme":"typeSearch searchField"}>
+		<div data-testid="typeSearchContainerTestId" className={props.darkTheme?"typeSearch searchField darkCardTheme":"typeSearch searchField"}>
 			<div className="jobTypeContainer">
 				<Checkbox
+					data-testid="typeSearchCheckBoxTestId"
 					className="jobTypeCheckBox"
 					color="default"
 					disableRipple
@@ -28,10 +29,7 @@ const TypeSearch=(props)=>{
 
 const mapStateToProps=(state)=>{
 	return {
-		location:state.jobsReducer.location,
-		title:state.jobsReducer.description,
-		type:state.jobsReducer.full_time,
-		page:state.jobsReducer.page
+		type:state.jobsReducer.full_time
 	}
 }
 

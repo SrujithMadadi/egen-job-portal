@@ -4,8 +4,8 @@ import "./Apply.css";
 const Apply=(props)=>{
 	return (
 		<div>
-			<div>How to Apply</div>
-			<div dangerouslySetInnerHTML={{__html:props.applyText}}></div>
+			<div data-testid="howToApplyText">How to Apply</div>
+			<div data-testid="howToApplyDescription" dangerouslySetInnerHTML={{__html:props.applyText}}></div>
 		</div>
 	)
 }

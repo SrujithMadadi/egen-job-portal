@@ -1,6 +1,6 @@
 import React from "react";
 import {createStore,applyMiddleware} from "redux";
-import Reducer from "Store/Reducers/index";
+import Reducer from "Store/Reducers";
 import { createMemoryHistory } from 'history';
 import {Provider} from 'react-redux';
 import {Router} from "react-router-dom";

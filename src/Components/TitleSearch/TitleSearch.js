@@ -7,7 +7,7 @@ import "./TitleSearch.css"
 
 const TitleSearch=(props)=>{
 	return (
-		<div className={props.darkTheme?"searchBar searchField darkCardTheme":"searchBar searchField"}>
+		<div data-testid="titleSearchContainerTestId" className={props.darkTheme?"searchBar searchField darkCardTheme":"searchBar searchField"}>
 			{props.deviceStatus?
 				<React.Fragment>
 					<div className="titleSearchIconContainer" onClick={props.getSearchResults}><SearchIcon color="primary"/></div>

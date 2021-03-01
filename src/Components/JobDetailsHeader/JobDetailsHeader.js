@@ -3,6 +3,11 @@ import Button from "Components/Button/Button";
 import "./JobDetailsHeader.css";
 
 const JobDetailsHeader=(props)=>{
+
+	const goToCompanyWebsite=(link)=>{
+		window.location.href=link
+	}
+
 	return (
 		<React.Fragment>
 			<div className="jobDetailsHeaderLogoContainer">
@@ -10,10 +15,10 @@ const JobDetailsHeader=(props)=>{
 			</div>
 			<div className="jobDetailsHeaderCompanyDetailsContainer">
 				<div>
-					<p>{props.jobDetails.company}</p>
+					<p className={props.darkTheme?"jobDetailsHeaderCompanyText":""}>{props.jobDetails.company}</p>
 					<p className="lightText">{props.jobDetails.company_url}</p>
 				</div>
-				<Button buttontext="Company Site" classes="companySiteButton"/>
+				<Button buttontext="Company Site" classes="companySiteButton" search={()=>goToCompanyWebsite(props.jobDetails.company_url)}/>
 			</div>
 		</React.Fragment>	
 

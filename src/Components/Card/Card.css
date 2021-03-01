@@ -15,10 +15,10 @@
     position: absolute;
     top:-7%;
     left: 10%;
-    height: 2rem;
-    width: 2rem;
-    border-radius: 29%;
+    height: 2.3rem;
+    width: 3rem;
     overflow: hidden;
+    background-color: transparent;
 }
 
 .logoContainer img{
@@ -53,20 +53,16 @@
 
 .typeContainer{
     display: flex;
-    color:rgb(87, 82, 82);
 }
 
 .jobTitle{
     color: black;
     font-weight: bold;
+    font-size: 1rem;
 }
 
 .darkThemeJobTitle{
     color: #FFFFFF;
-}
-
-.jobCompany{
-    color:rgb(87, 82, 82);
 }
 
 .jobLocation{
