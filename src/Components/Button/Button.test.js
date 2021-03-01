@@ -7,6 +7,6 @@ afterEach(cleanup);
 test("It should render the Action Button",()=>{
 	const {getByTestId}=render(<Button buttontext="Test Button" search={()=>{}}/>);
 	expect(getByTestId("customButtonTestId")).toBeInTheDocument();
-	expect(getByTestId("customButtonTestId")).toHaveTextContent("Test Buttons");
+	expect(getByTestId("customButtonTestId")).toHaveTextContent("Test Button");
 	expect(getByTestId("customButtonTestId")).toHaveClass("customButton");
 });
